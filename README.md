@@ -1,1 +1,1 @@
-https://artezon.github.io/js-tasks/
+https://artezon.github.io/js-practice/

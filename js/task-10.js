@@ -104,12 +104,25 @@ function checkEmail(field) {
 function checkPhone(field) {
     let phone = field.value;
     if (phone.length) {
-        let min = 10;
-        if (phone.startsWith('+7')) min = 11;
-        if (phone.replace(/\D/g, '').length >= min) return phone;
+        if (phone.replace(/\D/g, '').length >= 11) return phone;
         else errorMsg(field, 'Слишком короткий номер телефона.');
     }
     else errorMsg(field);
+}
+
+function phoneFormatting(field) {
+    let phone = field.value.trim();
+    if (phone.length) {
+        let phoneDigits = phone.replace(/\D/g, '');
+        phone = '+' + phoneDigits.slice(0, 15);
+        if (phoneDigits.length <= 11) {
+            if (phoneDigits.length > 1) phone = phone.slice(0, 2) + ' ' + phone.slice(2);
+            if (phoneDigits.length > 4) phone = phone.slice(0, 6) + ' ' + phone.slice(6);
+            if (phoneDigits.length > 7) phone = phone.slice(0, 10) + '-' + phone.slice(10);
+            if (phoneDigits.length > 9) phone = phone.slice(0, 13) + '-' + phone.slice(13);
+        }
+    }
+    field.value = phone;
 }
 
 function checkName(field, required, type) {
@@ -182,30 +195,6 @@ function checkSkills(field) {
     }
     skills = skills.length ? skills.join(', ') : 'нет навыков :('
     return skills;
-}
-
-function phoneFormatting(field) {
-    let phone = field.value;
-    if (phone.length) {
-        let phoneDigits = phone.replace(/\D/g, '');
-        if (phoneDigits.length <= 11) {
-            if (['7', '8'].includes(phoneDigits[0])) {
-                phone = '+7' + phoneDigits.slice(1);
-                if (phoneDigits.length > 1) phone = phone.slice(0, 2) + ' ' + phone.slice(2);
-                if (phoneDigits.length > 4) phone = phone.slice(0, 6) + ' ' + phone.slice(6);
-                if (phoneDigits.length > 7) phone = phone.slice(0, 10) + '-' + phone.slice(10);
-                if (phoneDigits.length > 9) phone = phone.slice(0, 13) + '-' + phone.slice(13);
-            }
-        }
-        else {
-            phone = phone.replace(/[^\d+]/g, '');
-            phoneDigits = phone.replace(/\D/g, '');
-            if (phoneDigits.length > 15) {
-                phone = (phone[0] === '+' ? '+' : '') + phoneDigits.slice(0, 15);
-            }
-        }
-    }
-    field.value = phone;
 }
 
 task10_form.onsubmit = task10_SubmitForm;
