@@ -1,0 +1,63 @@
+@import url("font.css");
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.task-wrapper {
+    background-color: #eee;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.task-wrapper * {
+    font-size: 1.1rem;
+}
+
+.task-wrapper > button {
+    background-color: #d0d0d0;
+    border-radius: 15px;
+    border: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.task-wrapper > button:hover {
+    background-color: #c2c2c2;
+}
+
+.task {
+    display: none;
+    max-height: 0;
+    transition: max-height 500ms;
+}
+
+.task-content {
+    padding: 15px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0 25px;
+}

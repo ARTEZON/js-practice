@@ -1,0 +1,23 @@
+#task-5 li div {
+    background-color: rgba(1,1,1,0.1);
+    padding: 2px;
+}
+
+#task-5 li > div > div {
+    margin: 10px;
+}
+
+#task-5 li:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+#task-5 table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#task-5 th, #task-5 td {
+    border: 1px solid black;
+    padding: 3px 5px;
+    min-width: 5em;
+}

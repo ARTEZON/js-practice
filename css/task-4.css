@@ -1,0 +1,21 @@
+#task-4 > .task-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.vanishing-block {
+    background-color: dodgerblue;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    color: white;
+    text-align: center;
+    transition: opacity 80ms;
+}
+
+.vanishing-block > p {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 2em;
+}

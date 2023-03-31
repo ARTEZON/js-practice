@@ -1,0 +1,23 @@
+#task-8-container {
+    display: inline-block;
+    position: relative;
+}
+
+#task-8-container > img {
+    position: relative;
+    width: 300px;
+    opacity: 100%;
+    z-index: 2;
+    transition: opacity 1s;
+}
+
+#task-8-container > p {
+    position: absolute;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}

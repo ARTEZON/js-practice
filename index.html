@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/task-2.css">
+    <link rel="stylesheet" type="text/css" href="css/task-4.css">
+    <link rel="stylesheet" type="text/css" href="css/task-5.css">
+    <link rel="stylesheet" type="text/css" href="css/task-6.css">
+    <link rel="stylesheet" type="text/css" href="css/task-7.css">
+    <link rel="stylesheet" type="text/css" href="css/task-8.css">
+    <link rel="stylesheet" type="text/css" href="css/task-9-10.css">
+    <title>Задания по JS</title>
+</head>
+<body>
+    <h1 class="title">Задания по JS – Вариант 32</h1>
+
+    <div id="dark-mode-toggle"><img src="img/dark.svg" alt="Вкл/выкл тёмную тему" draggable="false"></div>
+
+    <div class="task-wrapper">
+        <button id="task-1-button" onclick="expandTask('task-1')">➕ Задание 1. Дата и время: дата в формате ДД-ММ-ГГГГ, день_недели; время в формате ЧЧ/ММ/СС (am/pm); расположение строк в левом верхнем углу</button>
+        <div class="task" id="task-1">
+            <div class="task-content">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-2-button" onclick="expandTask('task-2')">➕ Задание 2. Календарь</button>
+        <div class="task" id="task-2">
+            <div class="task-content"></div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-3-button" onclick="expandTask('task-3')">➕ Задание 3. Сформировать массив дочерних элементов (только форм) DOM-дерева, вывести число этих элементов</button>
+        <div class="task" id="task-3">
+            <div class="task-content"></div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-4-button" onclick="expandTask('task-4')">➕ Задание 4. Через каждые 120мс удалять из видимости один из блоков (номер блока выбирается рандомно)</button>
+        <div class="task" id="task-4">
+            <div class="task-content">
+                <div class="vanishing-block"><p>1</p></div>
+                <div class="vanishing-block"><p>2</p></div>
+                <div class="vanishing-block"><p>3</p></div>
+                <div class="vanishing-block"><p>4</p></div>
+                <div class="vanishing-block"><p>5</p></div>
+                <div class="vanishing-block"><p>6</p></div>
+                <div class="vanishing-block"><p>7</p></div>
+                <div class="vanishing-block"><p>8</p></div>
+                <div class="vanishing-block"><p>9</p></div>
+                <div class="vanishing-block"><p>10</p></div>
+                <div class="vanishing-block"><p>11</p></div>
+                <div class="vanishing-block"><p>12</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-5-button" onclick="expandTask('task-5')">➕ Задание 5. Смена местами двух соседних элементов &#60;li&#62; в списке &#60;ul&#62;</button>
+        <div class="task" id="task-5">
+            <div class="task-content">
+                <button id="swap-list-items-button">Поменять местами два соседних элемента</button>
+                <ul id="task-5-list">
+                    <li><div>Я блок<div>Я вложенный блок</div></div></li>
+                    <li><p>Я параграф</p></li>
+                    <li>
+                        <table>
+                            <tr><td colspan="2" align="center">Я таблица</td></tr>
+                            <tr><th>Person</th><th>Age</th></tr>
+                            <tr><th>Chris</th><td>38</td></tr>
+                            <tr><th>Dennis</th><td>45</td></tr>
+                            <tr><th>Sarah</th><td>29</td></tr>
+                            <tr><th>Karen</th><td>47</td></tr>
+                        </table>
+                    </li>
+                    <li><img src="img/task-4.png" height="30" alt="Я картинка"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-6-button" onclick="expandTask('task-6')">➕ Задание 6. При наведении курсора мыши на объект сдвинуть его на 20px влево</button>
+        <div class="task" id="task-6">
+            <div class="task-content">
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+                <div class="task-6-object"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-7-button" onclick="expandTask('task-7')">➕ Задание 7. Меню со сладостями</button>
+        <div class="task" id="task-7">
+            <div class="task-content">
+                <button id="sweets-reset">Сброс</button>
+                <div class="sweets-menu-container">
+                    <button>Здесь сладости (нажми меня!)</button>
+                    <div class="dropdown-outer-box">
+                        <ul class="dropdown">
+                            <li>Пирожное</li>
+                            <li>Конфета</li>
+                            <li>Мармелад</li>
+                            <li>Зефир</li>
+                            <li>Пряник</li>
+                            <li>Шоколад</li>
+                            <li>Печенье</li>
+                        </ul>
+                        <p class="sweets-ended"><em>Сладости закончились.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-8-button" onclick="expandTask('task-8')">➕ Задание 8. Создать картинку, которая при наведении мыши будет плавно становиться прозрачной, проявляя текст, расположенный за ней; как только указатель мыши выйдет за пределы картинки, она должна снова плавно стать непрозрачной</button>
+        <div class="task" id="task-8">
+            <div class="task-content">
+                <div id="task-8-container">
+                    <p>Mona Lisa</p>
+                    <img src="img/Mona_Lisa.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-9-button" onclick="expandTask('task-9')">➕ Задание 9. Простая проверка формы</button>
+        <div class="task" id="task-9">
+            <div class="task-content">
+                <div class="registration-window">
+                    <h1 class="register-header">Регистрация</h1>
+                    <p class="have-account">Уже есть аккаунт? <a href="#">Войти</a></p>
+                    <form class="registration-form">
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="login">Логин</label>
+                                <input type="text" id="login">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="pass">Пароль</label>
+                                <input type="password" id="pass">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="pass-confirm">Подтвердите пароль</label>
+                                <input type="password" id="pass-confirm">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="email">Email</label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="phone">Телефон</label>
+                                <input type="text" id="phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="surname">Фамилия</label>
+                                <input type="text" id="surname">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="patronym">Отчество (при наличии)</label>
+                                <input type="text" id="patronym">
+                            </div>
+                        </div>
+                        <label>Ваш пол</label>
+                        <div class="form-row">
+                            <div class="form-row-item form-selector">
+                                <input type="radio" id="gender-male" name="gender" value="male">
+                                <label class="radio-selector" for="gender-male">Мужской</label>
+                            </div>
+                            <div class="form-row-item form-selector">
+                                <input type="radio" id="gender-female" name="gender" value="female">
+                                <label class="radio-selector" for="gender-female">Женский</label>
+                            </div>
+                        </div>
+                        <div class="form-msg" id="form-msg-gender"></div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="birthdate">Дата рождения (не обязательно)</label>
+                                <input type="date" id="birthdate">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="specialty">Специальность</label>
+                                <select id="specialty">
+                                    <option value="" selected disabled>Не выбрано</option>
+                                    <option value="Программист">Программист</option>
+                                    <option value="Тестировщик">Тестировщик</option>
+                                    <option value="Системный администратор">Системный администратор</option>
+                                    <option value="Специалист по информационной безопасности">Специалист по информационной безопасности</option>
+                                    <option value="Frontend-разработчик">Frontend-разработчик</option>
+                                    <option value="Backend-разработчик">Backend-разработчик</option>
+                                    <option value="Fullstack-разработчик">Fullstack-разработчик</option>
+                                    <option value="Разработчик мобильных приложений">Разработчик мобильных приложений</option>
+                                    <option value="Гейм-дизайнер">Гейм-дизайнер</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label>Ваши навыки</label>
+                                <div class="checkbox-list" id="skills">
+                                    <p>
+                                        <input type="checkbox" id="html" name="skills" value="">
+                                        <label class="checkbox-text" for="html">HTML and CSS</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="js" name="skills" value="">
+                                        <label class="checkbox-text" for="js">JavaScript</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="react" name="skills" value="">
+                                        <label class="checkbox-text" for="react">ReactJS</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cpp" name="skills" value="">
+                                        <label class="checkbox-text" for="cpp">C++</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cs" name="skills" value="">
+                                        <label class="checkbox-text" for="cs">C#</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="java" name="skills" value="">
+                                        <label class="checkbox-text" for="java">Java</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="python" name="skills" value="">
+                                        <label class="checkbox-text" for="python">Python</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="tf" name="skills" value="">
+                                        <label class="checkbox-text" for="tf">TensorFlow</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="ps" name="skills" value="">
+                                        <label class="checkbox-text" for="ps">Adobe Photoshop</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="ae" name="skills" value="">
+                                        <label class="checkbox-text" for="ae">Adobe After Effects</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cad" name="skills" value="">
+                                        <label class="checkbox-text" for="cad">AutoCAD</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="blender" name="skills" value="">
+                                        <label class="checkbox-text" for="blender">Blender 3D</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="unity" name="skills" value="">
+                                        <label class="checkbox-text" for="unity">Unity</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="unreal" name="skills" value="">
+                                        <label class="checkbox-text" for="unreal">Unreal Engine</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <input class="form-button" id="register-button" type="submit" value="Зарегистрироваться">
+                            <input class="form-button" id="clear-button" type="button" value="Очистить форму">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-10-button" onclick="expandTask('task-10')">➕ Задание 10. Сложная обработка формы при помощи регулярных выражений</button>
+        <div class="task" id="task-10">
+            <div class="task-content">
+                <div class="registration-window">
+                    <h1 class="register-header">Регистрация</h1>
+                    <p class="have-account">Уже есть аккаунт? <a href="#">Войти</a></p>
+                    <form class="registration-form">
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="login--task10">Логин</label>
+                                <input type="text" id="login--task10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="pass--task10">Пароль</label>
+                                <input type="password" id="pass--task10">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="pass-confirm--task10">Подтвердите пароль</label>
+                                <input type="password" id="pass-confirm--task10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="email--task10">Email</label>
+                                <input type="text" id="email--task10">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="phone--task10">Телефон</label>
+                                <input type="text" id="phone--task10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="surname--task10">Фамилия</label>
+                                <input type="text" id="surname--task10">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="name--task10">Имя</label>
+                                <input type="text" id="name--task10">
+                            </div>
+                            <div class="form-row-item">
+                                <label for="patronym--task10">Отчество (при наличии)</label>
+                                <input type="text" id="patronym--task10">
+                            </div>
+                        </div>
+                        <label>Ваш пол</label>
+                        <div class="form-row">
+                            <div class="form-row-item form-selector">
+                                <input type="radio" id="gender-male--task10" name="gender" value="male">
+                                <label class="radio-selector" for="gender-male--task10">Мужской</label>
+                            </div>
+                            <div class="form-row-item form-selector">
+                                <input type="radio" id="gender-female--task10" name="gender" value="female">
+                                <label class="radio-selector" for="gender-female--task10">Женский</label>
+                            </div>
+                        </div>
+                        <div class="form-msg" id="form-msg-gender--task10"></div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="birthdate--task10">Дата рождения (не обязательно)</label>
+                                <input type="date" id="birthdate--task10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label for="specialty--task10">Специальность</label>
+                                <select id="specialty--task10">
+                                    <option value="" selected disabled>Не выбрано</option>
+                                    <option value="Программист">Программист</option>
+                                    <option value="Тестировщик">Тестировщик</option>
+                                    <option value="Системный администратор">Системный администратор</option>
+                                    <option value="Специалист по информационной безопасности">Специалист по информационной безопасности</option>
+                                    <option value="Frontend-разработчик">Frontend-разработчик</option>
+                                    <option value="Backend-разработчик">Backend-разработчик</option>
+                                    <option value="Fullstack-разработчик">Fullstack-разработчик</option>
+                                    <option value="Разработчик мобильных приложений">Разработчик мобильных приложений</option>
+                                    <option value="Гейм-дизайнер">Гейм-дизайнер</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row-item">
+                                <label>Ваши навыки</label>
+                                <div class="checkbox-list" id="skills--task10">
+                                    <p>
+                                        <input type="checkbox" id="html--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="html--task10">HTML and CSS</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="js--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="js--task10">JavaScript</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="react--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="react--task10">ReactJS</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cpp--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="cpp--task10">C++</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cs--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="cs--task10">C#</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="java--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="java--task10">Java</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="python--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="python--task10">Python</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="tf--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="tf--task10">TensorFlow</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="ps--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="ps--task10">Adobe Photoshop</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="ae--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="ae--task10">Adobe After Effects</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="cad--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="cad--task10">AutoCAD</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="blender--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="blender--task10">Blender 3D</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="unity--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="unity--task10">Unity</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="unreal--task10" name="skills" value="">
+                                        <label class="checkbox-text" for="unreal--task10">Unreal Engine</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <input class="form-button" id="register-button--task10" type="submit" value="Зарегистрироваться">
+                            <input class="form-button" id="clear-button--task10" type="button" value="Очистить форму">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-wrapper">
+        <button id="task-11-button" onclick="expandTask('task-11')">➕ Задание 11. Игра (???)</button>
+        <div class="task" id="task-11">
+            <div class="task-content">
+                <strong style="font-size: 1.5em">Coming soon...</strong>
+            </div>
+        </div>
+    </div>
+
+    <footer>Эзри Артём</footer>
+    <script src="js/main.js"></script>
+    <script src="js/dark-theme.js"></script>
+    <script src="js/task-1.js"></script>
+    <script src="js/task-2.js"></script>
+    <script src="js/task-3.js"></script>
+    <script src="js/task-4.js"></script>
+    <script src="js/task-5.js"></script>
+    <script src="js/task-6.js"></script>
+    <script src="js/task-7.js"></script>
+    <script src="js/task-8.js"></script>
+    <script src="js/task-9.js"></script>
+    <script src="js/task-10.js"></script>
+    <script src="js/task-9-10-common.js"></script>
+    <script src="js/task-11.js"></script>
+</body>
+</html>

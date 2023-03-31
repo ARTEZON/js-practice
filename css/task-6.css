@@ -1,0 +1,13 @@
+.task-6-object {
+    position: relative;
+    left: calc(100% - 30px);
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 100%;
+    transition: left 100ms;
+}
+
+.task-6-object:not(:last-child) {
+    margin-bottom: 10px;
+}
