@@ -1,7 +1,7 @@
 const toggle = document.getElementById('dark-mode-toggle');
 const icon = toggle.firstElementChild;
 
-document.getElementById('dark-mode-toggle').onclick = (e) => {
+toggle.onclick = () => {
     if (!document.body.classList.contains('dark-theme')) {
         icon.setAttribute('src', icon.getAttribute('src').replace('dark', 'light'));
         document.documentElement.style.colorScheme = 'dark';
