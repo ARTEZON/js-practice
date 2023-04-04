@@ -1,25 +1,38 @@
-#dark-mode-toggle {
+#dark-mode-toggle,
+#github-link {
     width: 2.5rem;
     height: 2.5rem;
     position: fixed;
     top: 20px;
-    right: 20px;
     opacity: 70%;
     cursor: pointer;
     transition: opacity 200ms;
 }
 
-#dark-mode-toggle:hover {
+#dark-mode-toggle {
+    right: 20px;
+}
+
+#github-link {
+    left: 20px;
+}
+
+#dark-mode-toggle:hover,
+#github-link:hover {
     opacity: 90%;
 }
 
-#dark-mode-toggle > img {
+.action-image {
     width: 100%;
 }
 
 * {
     --dark-length: 500ms;
     transition: background-color var(--dark-length), border-color var(--dark-length);
+}
+
+body.dark-theme .monochrome-image {
+    filter: invert(1);
 }
 
 body.dark-theme {
@@ -55,10 +68,6 @@ body.dark-theme #task-5 li div {
 
 body.dark-theme #task-5 th, body.dark-theme #task-5 td {
     border-color: #fefefe;
-}
-
-body.dark-theme #task-5 img {
-    filter: invert(1);
 }
 
 body.dark-theme .dropdown-outer-box {
