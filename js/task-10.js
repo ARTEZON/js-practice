@@ -121,6 +121,12 @@ function phoneFormatting(field) {
             if (phoneDigits.length > 7) phone = phone.slice(0, 10) + '-' + phone.slice(10);
             if (phoneDigits.length > 9) phone = phone.slice(0, 13) + '-' + phone.slice(13);
         }
+        else if (phoneDigits.length === 12) {
+            phone = phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6, 9) + '-' + phone.slice(9, 11)+ '-' + phone.slice(11, 13);
+        }
+        else if (phoneDigits.length === 13) {
+            phone = phone.slice(0, 4) + ' ' + phone.slice(4, 7) + ' ' + phone.slice(7, 10) + '-' + phone.slice(10, 12)+ '-' + phone.slice(12, 14);
+        }
     }
     field.value = phone;
 }

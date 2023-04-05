@@ -53,8 +53,25 @@ body.dark-theme .task-wrapper > button:hover {
     background-color: #555;
 }
 
-body.dark-theme #task-2 td:not(.day-off) {
-    color: #000;
+body.dark-theme #task-2 .calendar-wrapper {
+    background-color: #333;
+}
+
+body.dark-theme #task-2 .month-name {
+    background-color: #0082bd;
+}
+
+body.dark-theme #task-2 th {
+    background-color: #00669b;
+}
+
+body.dark-theme #task-2 td {
+    color: #fefefe;
+    border-color: #4a4a4a;
+}
+
+body.dark-theme #task-2 td.day-off {
+    color: #f44;
 }
 
 body.dark-theme #task-5 button {
@@ -82,7 +99,7 @@ body.dark-theme .registration-window {
 body.dark-theme .registration-window input,
 body.dark-theme .registration-window .radio-selector,
 body.dark-theme .registration-window select {
-    background-color: #555;
+    background-color: #4a4a4a;
     color: #fefefe;
     border-color: #777;
 }
@@ -102,4 +119,23 @@ body.dark-theme .registration-window input[type=checkbox]:checked + label {
 
 body.dark-theme .registration-window .have-account > a {
     color: #807ef8;
+}
+
+body.dark-theme .registration-form select.error-red {
+    border-color: #f44;
+    background-color: rgba(255,68,68,0.2);
+}
+
+body.dark-theme .registration-form select.error-red:focus {
+    border-color: #f44;
+    box-shadow: 0 0 0 2px rgba(255,68,68,0.3);
+}
+
+body.dark-theme .form-selector input.error-red + label {
+    border-color: #f44;
+    background-color: rgba(255,68,68,0.2);
+}
+
+body.dark-theme .form-error-message {
+    color: #f44;
 }

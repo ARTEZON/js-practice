@@ -1,7 +1,7 @@
 let delay = 0;
 for (let task of document.getElementsByClassName('task-wrapper')) {
     delay += 50;
-    setTimeout(() => task.style.opacity = '100%', delay);
+    setTimeout(() => task.classList.remove('fadein'), delay);
 }
 
 function expandTask(taskId) {
