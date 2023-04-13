@@ -60,6 +60,27 @@ p {
     padding: 0;
 }
 
+.btn {
+    display: inline-block;
+    background: linear-gradient(0deg, #247ce3, #499ae8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(24,78,192,0.5);
+    transition: all 100ms;
+    user-select: none;
+    text-decoration: none;
+}
+
+.btn:hover {
+    filter: brightness(110%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
 footer {
     text-align: center;
     margin: 20px 0 25px;

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("bg.jpg");
+    font-family: sans-serif;
+}
+
+.wrapper {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.todo-container {
+    background-color: #fff;
+    width: 20em;
+    border-radius: 0.4em;
+    overflow: hidden;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.2);
+    margin: 1em;
+    resize: horizontal;
+    min-width: 10em;
+}
+
+.todo-title {
+    background: linear-gradient(0deg, #247ce3, #499ae8);
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: -0.02em -0.03em 0.01em #444;
+    padding: 0.5em;
+}
+
+.todo-title > .textbox:empty:before {
+    content: "Без названия";
+    color: #ccc;
+    cursor: text;
+}
+
+.todo-list {
+    border-collapse: collapse;
+}
+
+.todo-task {
+    background: #fff;
+    position: relative;
+}
+
+.todo-task:not(:last-child) {
+    border-bottom: 0.12em solid #d8d8d8;
+}
+
+.todo-task-checkmark {
+    border-right: 0.12em solid #ff0302;
+    width: 2.1em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.todo-task-title {
+    width: 100%;
+}
+
+.textbox {
+    outline: none;
+}
+
+.todo-task textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4em;
+    overflow: hidden;
+    resize: none;
+    font: inherit;
+    border: none;
+    outline: none;
+    height: 2em;
+}
+
+.todo-task input[type='checkbox'] {
+    display: none;
+}
+
+.todo-task .checkbox {
+    display: block;
+    height: 1em;
+    width: 1em;
+    border: 0.12em solid #000;
+    border-radius: 0.2em;
+    background-image: url("data:image/svg+xml,%3Csvg width='5px' height='5px' viewBox='0 0 5 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 1 2 L 2 3 L 4 1' stroke='%23000000' stroke-width='0.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    transition: all 250ms;
+}
+
+.todo-task .checkbox:has(input[disabled]) {
+    opacity: 30%;
+}
+
+.checkbox:has(input[type='checkbox']:checked) {
+    background-size: 100%;
+}
+
+.dragging-element {
+    pointer-events: none;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font: bold 2em sans-serif;
+    color: #fff;
+    opacity: 70%;
+    text-shadow: 1px 1px 4px rgba(0,0,0,1);
+    text-decoration: none;
+}

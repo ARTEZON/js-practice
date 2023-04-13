@@ -53,6 +53,11 @@ body.dark-theme .task-wrapper > button:hover {
     background-color: #555;
 }
 
+body.dark-theme .btn {
+    background: linear-gradient(0deg, #113e9d, #2859c2);
+    color: #fefefe;
+}
+
 body.dark-theme #task-2 .calendar-wrapper {
     background-color: #333;
 }
