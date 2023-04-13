@@ -36,6 +36,7 @@ body {
     color: #fff;
     text-shadow: -0.02em -0.03em 0.01em #444;
     padding: 0.5em;
+    overflow-wrap: anywhere;
 }
 
 .todo-title > .textbox:empty:before {
