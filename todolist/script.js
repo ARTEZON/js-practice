@@ -1,6 +1,9 @@
 $(document).ready(() => addNew(false));
 const table = $('.todo-list')[0];
 $(table).on('input', onInput);
+$(window).on('beforeunload', e => {
+    if (table.childElementCount > 1) return false;
+});
 
 function addNew(slide = true) {
     const task = $('<tr class="todo-task new"></tr>');
@@ -27,6 +30,11 @@ function addNew(slide = true) {
             if (preventDefault) e.preventDefault();
         }
     });
+    task[0].querySelector('input[type=checkbox]').oninput = (e) => {
+        e.target.checked
+        ? e.target.parentElement.classList.add('checked')
+        : e.target.parentElement.classList.remove('checked');
+    }
     task.appendTo(table);
     if (slide) {
         task.find('div').css('display', 'none');

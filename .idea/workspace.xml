@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d066fad9-4658-4a37-befc-d7d70ca4c12b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/js-practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/js-practice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dark-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/drag-and-drop.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/drag-and-drop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,8 @@
       <workItem from="1681379759405" duration="24536000" />
       <workItem from="1681406805163" duration="69000" />
       <workItem from="1681407054870" duration="105000" />
+      <workItem from="1681420838221" duration="697000" />
+      <workItem from="1681422107020" duration="3168000" />
     </task>
     <servers />
   </component>

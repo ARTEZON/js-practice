@@ -33,6 +33,7 @@ function mouseMoveHandler(e) {
         draggingElement.classList.add('dragging-element')
         draggingElement.style.width = width + 'px';
         draggingElement.style.position = 'fixed';
+        draggingElement.style.backgroundColor = '#fff';
         draggingElement.style.boxShadow = '0 0 0.5em rgba(0,0,0,0.2)';
         draggingElement.style.borderRadius = '0.4em';
         draggingElement.style.overflow = 'hidden';

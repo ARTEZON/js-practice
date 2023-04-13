@@ -49,7 +49,6 @@ body {
 }
 
 .todo-task {
-    background: #fff;
     position: relative;
 }
 
@@ -101,11 +100,11 @@ body {
     transition: all 250ms;
 }
 
-.todo-task .checkbox:has(input[disabled]) {
+.todo-task.new .checkbox {
     opacity: 30%;
 }
 
-.checkbox:has(input[type='checkbox']:checked) {
+.todo-task .checkbox.checked {
     background-size: 100%;
 }
 
