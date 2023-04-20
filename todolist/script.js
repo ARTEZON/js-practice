@@ -1,4 +1,14 @@
 $(document).ready(() => addNew(false));
+const container = $('.todo-container');
+try {
+    new ResizeObserver(() => {
+        container.find('textarea').each((i, textarea) => {
+            $(textarea).css('height', '0');
+            $(textarea).css('height', String(textarea.scrollHeight) + 'px');
+        })
+    }).observe(container[0]);
+}
+catch (e) {}
 const table = $('.todo-list')[0];
 $(table).on('input', onInput);
 $('#clear-button').on('click', () => {
@@ -104,7 +114,7 @@ function save(forced = false) {
                 unsavedChanges = false;
                 saveStatus.textContent = 'Сохранено';
             }
-            catch(e) { autosave = false; }
+            catch (e) { autosave = false; }
         }, forced ? 1 : saveDelay);
     }
 }
@@ -115,7 +125,7 @@ function load() {
         if (autosaveSetting !== null) autosave = autosaveSetting === 'true';
         else {
             try { localStorage.setItem('autosave-tasks', autosave); }
-            catch(e) { autosave = false; }
+            catch (e) { autosave = false; }
         }
         $('#autosave-label').prepend(`<input type="checkbox" id="autosave-checkbox"${autosave ? ' checked' : ''}>`)
         const autosaveCheckbox = $('#autosave-checkbox');
@@ -123,7 +133,7 @@ function load() {
             autosave = e.target.checked;
             if (autosave) save(true);
             try { localStorage.setItem('autosave-tasks', autosave); }
-            catch(e) { autosaveCheckbox.disabled = true; }
+            catch (e) { autosaveCheckbox.disabled = true; }
         });
 
         const json = localStorage.getItem('saved-tasks');
@@ -138,7 +148,7 @@ function load() {
             });
         }
     }
-    catch(e) { autosave = false; }
+    catch (e) { autosave = false; }
 
-    $('.todo-container').removeClass('fadein');
+    container.removeClass('fadein');
 }

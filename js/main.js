@@ -47,7 +47,7 @@ function loadSettings() {
         else localStorage.setItem('theme', 'light');
         return true;
     }
-    catch(e) {
+    catch (e) {
         return false;
     }
 }

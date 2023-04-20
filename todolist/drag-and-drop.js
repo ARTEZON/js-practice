@@ -3,7 +3,7 @@ let draggingElement;
 let placehodler;
 let isDraggingStarted = false;
 let mouseX, mouseY, mouseElementX, mouseElementY;
-let mouseOverElement;
+let mouseOverElement = null;
 const tint = document.createElement('div');
 tint.classList.add('tint');
 let remove;
