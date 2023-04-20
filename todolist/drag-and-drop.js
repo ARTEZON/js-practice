@@ -3,25 +3,20 @@ let draggingElement;
 let placehodler;
 let isDraggingStarted = false;
 let mouseX, mouseY, mouseElementX, mouseElementY;
+let mouseOverElement;
 const tint = document.createElement('div');
 tint.classList.add('tint');
-tint.style.width = '100%';
-tint.style.height = '100%';
-tint.style.top = '0';
-tint.style.left = '0';
-tint.style.position = 'absolute';
-tint.style.zIndex = '10';
-tint.style.backgroundColor = 'rgba(255,0,0,0.5)'
 let remove;
 
-function mouseDownHandler(e) {
+function mouseDownHandler() {
     draggingRow = this;
     remove = false;
 
     $(document).on('mousemove', mouseMoveHandler);
     $(document).on('mouseup', mouseUpHandler);
     Array.from(table.querySelectorAll('tr:not(.dragging-element)')).forEach(row => {
-        $(row).on('mouseover', mouseOverHandler);
+        $(row).on('mouseenter', mouseEnterHandler);
+        $(row).on('mouseleave', mouseLeaveHandler);
     })
 }
 
@@ -32,23 +27,12 @@ function mouseMoveHandler(e) {
         draggingElement = draggingRow.cloneNode(true);
         draggingElement.classList.add('dragging-element')
         draggingElement.style.width = width + 'px';
-        draggingElement.style.position = 'fixed';
-        draggingElement.style.backgroundColor = '#fff';
-        draggingElement.style.boxShadow = '0 0 0.5em rgba(0,0,0,0.2)';
-        draggingElement.style.borderRadius = '0.4em';
-        draggingElement.style.overflow = 'hidden';
-        draggingElement.style.transform = 'scale(1)';
         $('.todo-list').append(draggingElement);
 
         placehodler = document.createElement('div');
         placehodler.classList.add('placeholder');
         placehodler.style.width = width + 'px';
         placehodler.style.height = draggingRow.scrollHeight + 'px';
-        placehodler.style.position = 'absolute';
-        placehodler.style.left = '0';
-        placehodler.style.top = '0';
-        placehodler.style.backgroundColor = '#efe';
-        placehodler.style.boxShadow = 'inset 0 2px 30px #9a9';
         $(draggingRow).append(placehodler);
 
         const rect = draggingRow.getBoundingClientRect();
@@ -64,6 +48,14 @@ function mouseMoveHandler(e) {
     draggingElement.style.left = `${mouseX - mouseElementX}px`;
     draggingElement.style.top = `${mouseY - mouseElementY}px`;
 
+    if (mouseOverElement) {
+        const rect = mouseOverElement.getBoundingClientRect();
+        if (mouseY < (rect.top + rect.height / 2) || mouseOverElement.classList.contains('new'))
+            $(draggingRow).insertBefore(mouseOverElement);
+        else
+            $(draggingRow).insertAfter(mouseOverElement);
+    }
+
     if (document.elementFromPoint(mouseX, mouseY).classList.contains('wrapper')) {
         if (!remove) draggingElement.appendChild(tint);
         remove = true;
@@ -76,8 +68,12 @@ function mouseMoveHandler(e) {
     window.getSelection().empty();
 }
 
-function mouseOverHandler() {
-    $(draggingRow).insertBefore(this);
+function mouseEnterHandler() {
+    mouseOverElement = this;
+}
+
+function mouseLeaveHandler() {
+    mouseOverElement = null;
 }
 
 function mouseUpHandler() {
@@ -85,7 +81,8 @@ function mouseUpHandler() {
     $(document).off('mousemove', mouseMoveHandler);
     $(document).off('mouseup', mouseUpHandler);
     Array.from(table.querySelectorAll('tr:not(.dragging-element)')).forEach(row => {
-        $(row).off('mouseover', mouseOverHandler);
+        $(row).off('mouseenter', mouseEnterHandler);
+        $(row).off('mouseleave', mouseLeaveHandler);
     })
 
     if (remove) {
@@ -115,4 +112,5 @@ function stopDragging() {
     placehodler.remove();
     draggingElement.remove();
     isDraggingStarted = false;
+    save();
 }

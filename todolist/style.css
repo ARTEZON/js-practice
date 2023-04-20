@@ -26,6 +26,11 @@ body {
     margin: 1em;
     resize: horizontal;
     min-width: 10em;
+    transition: opacity 200ms;
+}
+
+.fadein {
+    opacity: 0;
 }
 
 .todo-title {
@@ -122,4 +127,87 @@ body {
     opacity: 70%;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
     text-decoration: none;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    opacity: 70%;
+    box-shadow: 1px 1px 4px rgba(0,0,0,1);
+    border-radius: 10px;
+    padding: 7px;
+    accent-color: #444;
+    width: 200px;
+}
+
+#autosave-checkbox {
+    margin-right: 5px;
+}
+
+.menu * {
+    font: normal 16px sans-serif;
+}
+
+.menu p {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.menu div {
+    display: flex;
+    gap: 7px;
+}
+
+.setting {
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    padding: 5px;
+    display: block;
+}
+
+.setting:hover {
+    background-color: #bbb;
+}
+
+.setting:active {
+    background-color: #aaa;
+}
+
+.menu button {
+    flex-grow: 1;
+}
+
+.menu label {
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.tint {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255,0,0,0.5)
+}
+
+.dragging-element {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.2);
+    border-radius: 0.4em;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #efe;
+    box-shadow: inset 0 2px 30px #9a9;
 }

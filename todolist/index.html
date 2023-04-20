@@ -9,14 +9,22 @@
 </head>
 <body>
     <a class="back-button" href="../">🡐 Вернуться назад</a>
+    <div class="menu">
+        <p id="save-status">Сохранено</p>
+        <label class="setting" id="autosave-label">Автосохранение</label>
+        <div>
+            <button class="setting" id="save-button">Сохранить</button>
+            <button class="setting" id="clear-button">Очистить</button>
+        </div>
+    </div>
     <div class="wrapper">
-        <div class="todo-container">
+        <div class="todo-container fadein">
             <div class="todo-title"><span class="textbox" role="textbox" contenteditable>:: todolist ::</span></div>
             <table class="todo-list"></table>
         </div>
     </div>
 
-    <script src="script.js"></script>
     <script src="drag-and-drop.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

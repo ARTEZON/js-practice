@@ -26,121 +26,179 @@
     width: 100%;
 }
 
-* {
-    --dark-length: 500ms;
-    transition: background-color var(--dark-length), border-color var(--dark-length);
+body {
+    transition: background-color 200ms, border-color 200ms;
 }
 
-body.dark-theme .monochrome-image {
-    filter: invert(1);
+.monochrome-image {
+    transition: filter 200ms;
 }
 
-body.dark-theme {
-    background-color: #080808;
+html[data-theme='dark'] {
+    --body-bgcolor: #080808;
     color: #fefefe;
 }
 
-body.dark-theme .task-wrapper {
+html[data-theme='dark'] .monochrome-image {
+    filter: invert(1);
+}
+
+html[data-theme='dark'] button {
+    border-color: #858585;
+}
+
+html[data-theme='dark'] .task-wrapper {
     background-color: #1a1a1a;
 }
 
-body.dark-theme .task-wrapper > button {
+html[data-theme='dark'] .task-wrapper > button {
     background-color: #444;
     color: #fefefe;
 }
 
-body.dark-theme .task-wrapper > button:hover {
+html[data-theme='dark'] .task-wrapper > button:hover {
     background-color: #555;
 }
 
-body.dark-theme .btn {
-    background: linear-gradient(0deg, #113e9d, #2859c2);
+html[data-theme='dark'] .btn {
+    background: linear-gradient(0deg, #1f4088, #385aa2);
     color: #fefefe;
 }
 
-body.dark-theme #task-2 .calendar-wrapper {
+html[data-theme='dark'] #task-2 .calendar-wrapper {
     background-color: #333;
 }
 
-body.dark-theme #task-2 .month-name {
+html[data-theme='dark'] #task-2 .month-name {
     background-color: #0082bd;
 }
 
-body.dark-theme #task-2 th {
+html[data-theme='dark'] #task-2 th {
     background-color: #00669b;
 }
 
-body.dark-theme #task-2 td {
+html[data-theme='dark'] #task-2 td {
     color: #fefefe;
     border-color: #4a4a4a;
 }
 
-body.dark-theme #task-2 td.day-off {
+html[data-theme='dark'] #task-2 td.day-off {
     color: #f44;
 }
 
-body.dark-theme #task-5 button {
-    background-color: #333;
+html[data-theme='dark'] #task-5 button {
     color: #fefefe;
 }
 
-body.dark-theme #task-5 li div {
+html[data-theme='dark'] #task-4 .vanishing-block {
+    background-color: #0f6fcc;
+    color: #fefefe;
+}
+
+html[data-theme='dark'] #task-5 li div {
     background-color: rgba(255,255,255,0.1);
 }
 
-body.dark-theme #task-5 th, body.dark-theme #task-5 td {
+html[data-theme='dark'] #task-5 th, html[data-theme='dark'] #task-5 td {
     border-color: #fefefe;
 }
 
-body.dark-theme .dropdown-outer-box {
+html[data-theme='dark'] .dropdown-outer-box {
     background-color: #333;
 }
 
-body.dark-theme .registration-window {
+html[data-theme='dark'] .registration-window {
     background-color: #333;
     color: #fefefe;
+    accent-color: #bcb9ff;
 }
 
-body.dark-theme .registration-window input,
-body.dark-theme .registration-window .radio-selector,
-body.dark-theme .registration-window select {
+html[data-theme='dark'] .registration-window a:after {
+    background-color: #807ef8;
+}
+
+html[data-theme='dark'] .registration-window input,
+html[data-theme='dark'] .registration-window .radio-selector,
+html[data-theme='dark'] .registration-window select {
     background-color: #4a4a4a;
     color: #fefefe;
     border-color: #777;
 }
 
-body.dark-theme .registration-window label:not(.form-error-message) {
+html[data-theme='dark'] .registration-window label:not(.form-error-message) {
     color: #ddd;
 }
 
-body.dark-theme .registration-window input[type=radio]:checked + label {
+html[data-theme='dark'] .registration-window input[type=radio]:checked + label {
     background-color: #11113d;
     color: #5648ff;
 }
 
-body.dark-theme .registration-window input[type=checkbox]:checked + label {
+html[data-theme='dark'] .registration-window input[type=checkbox]:checked + label {
     color: #bcb9ff;
 }
 
-body.dark-theme .registration-window .have-account > a {
+html[data-theme='dark'] .registration-window .have-account > a {
     color: #807ef8;
 }
 
-body.dark-theme .registration-form select.error-red {
+html[data-theme='dark'] .registration-form select.error-red {
     border-color: #f44;
     background-color: rgba(255,68,68,0.2);
 }
 
-body.dark-theme .registration-form select.error-red:focus {
+html[data-theme='dark'] .registration-form select.error-red:focus {
     border-color: #f44;
     box-shadow: 0 0 0 2px rgba(255,68,68,0.3);
 }
 
-body.dark-theme .form-selector input.error-red + label {
+html[data-theme='dark'] .form-selector input.error-red + label {
     border-color: #f44;
     background-color: rgba(255,68,68,0.2);
 }
 
-body.dark-theme .form-error-message {
+html[data-theme='dark'] .form-error-message {
     color: #f44;
+}
+
+html[data-theme='dark'] #game-info {
+    border-bottom-color: #ccc;
+}
+
+html[data-theme='dark'] .counter-red {
+    color: #f44;
+}
+
+html[data-theme='dark'] #board {
+    background-color: #0a0a0a;
+    border-color: #666;
+    color: #fcfcfc;
+}
+
+html[data-theme='dark'] #board > div {
+    border-color: #0a0a0a;
+}
+
+html[data-theme='dark'] #board > [data-status="hidden"] {
+    background-color: #333;
+}
+
+html[data-theme='dark'] #board > [data-status="mistake"] {
+    background-color: #f44;
+}
+
+html[data-theme='dark'] #board > [data-status="number"] {
+    background-color: #555;
+    --color-1: #7979ff;
+    --color-2: #78ff78;
+    --color-3: #ff7777;
+    --color-4: #c374e1;
+    --color-5: #cc837b;
+    --color-6: #77ffff;
+    --color-7: #ffffff;
+    --color-8: #a0a0a0;
+}
+
+html[data-theme='dark'] #board > [data-status="flagged"] {
+    background-color: #333;
 }

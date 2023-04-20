@@ -1,3 +1,5 @@
+loadSettings();
+
 let delay = 0;
 for (let task of document.getElementsByClassName('task-wrapper')) {
     delay += 50;
@@ -35,5 +37,17 @@ function expandTask(taskId) {
         taskObject.removeAttribute('show');
         let button = document.getElementById(taskId + '-button');
         button.innerHTML = button.innerHTML.replace('➖', '➕');
+    }
+}
+
+function loadSettings() {
+    try {
+        const theme = localStorage.getItem('theme');
+        if (theme !== null) setTheme(theme);
+        else localStorage.setItem('theme', 'light');
+        return true;
+    }
+    catch(e) {
+        return false;
     }
 }

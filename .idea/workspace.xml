@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d066fad9-4658-4a37-befc-d7d70ca4c12b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dark-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dark-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dark-theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/task-11.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/drag-and-drop.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/drag-and-drop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -42,6 +51,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js-practice/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,10 +86,28 @@
       <workItem from="1681422107020" duration="3168000" />
       <workItem from="1681425777661" duration="120000" />
       <workItem from="1681425942969" duration="26000" />
+      <workItem from="1681465268234" duration="2603000" />
+      <workItem from="1681803555704" duration="181000" />
+      <workItem from="1681803746722" duration="47370000" />
+      <workItem from="1681921229901" duration="10160000" />
+      <workItem from="1681988845012" duration="98000" />
+      <workItem from="1681988952105" duration="23065000" />
+      <workItem from="1682013529085" duration="612000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

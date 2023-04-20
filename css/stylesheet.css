@@ -1,4 +1,9 @@
 @import url("font.css");
+@import url("dark-theme.css");
+
+:root {
+    --body-bgcolor: #fff;
+}
 
 * {
     font-family: "Inter", sans-serif;
@@ -9,6 +14,7 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--body-bgcolor);
 }
 
 .title {
@@ -23,7 +29,7 @@ body {
     background-color: #eee;
     border-radius: 15px;
     margin-bottom: 25px;
-    transition: opacity 500ms;
+    transition: opacity 500ms, background-color 200ms, border-color 200ms;
 }
 
 .task-wrapper * {
@@ -58,6 +64,12 @@ body {
 p {
     margin: 0;
     padding: 0;
+}
+
+button {
+    background-color: rgba(60%,60%,60%,0.3);
+    border: 1px solid #767676;
+    border-radius: 2px;
 }
 
 .btn {
